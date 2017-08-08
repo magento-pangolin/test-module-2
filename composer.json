@@ -3,44 +3,47 @@
     "description": "Magento 2 Acceptance Test Module Catalog",
     "repositories": [
         {
-            "type": "vcs",
-            "url": "https://github.com/magento-pangolin/magento2-acceptance-test-framework"
+            "type" : "composer",
+            "url" : "http://pangolin.packages.org:8080/"
         }
     ],
     "require": {
         "php": "~7.0",
-        "magento/magento2-acceptance-test-framework": "dev-develop",
+        "codeception/codeception": "2.2|2.3",
         "allure-framework/allure-codeception": "dev-master",
         "consolidation/robo": "^1.0.0",
-        "henrikbjorn/lurker": "^1.2"
+        "henrikbjorn/lurker": "^1.2",
+        "vlucas/phpdotenv": "~2.4",
+        "magento/magento2-acceptance-test-framework": "dev-MQE-19-Test-Framework-Packaging",
+        "my/magento-composer-installer": "dev-master"
     },
     "suggest": {
-        "magento/magento2-acceptance-test-module-store": "dev-develop",
-        "magento/magento2-acceptance-test-module-eav": "dev-develop",
-        "magento/magento2-acceptance-test-module-cms": "dev-develop",
-        "magento/magento2-acceptance-test-module-indexer": "dev-develop",
-        "magento/magento2-acceptance-test-module-customer": "dev-develop",
-        "magento/magento2-acceptance-test-module-theme": "dev-develop",
-        "magento/magento2-acceptance-test-module-checkout": "dev-develop",
-        "magento/magento2-acceptance-test-module-backend": "dev-develop",
-        "magento/magento2-acceptance-test-module-widget": "dev-develop",
-        "magento/magento2-acceptance-test-module-wishlist": "dev-develop",
-        "magento/magento2-acceptance-test-module-tax": "dev-develop",
-        "magento/magento2-acceptance-test-module-msrp": "dev-develop",
-        "magento/magento2-acceptance-test-module-catalog-inventory": "dev-develop",
-        "magento/magento2-acceptance-test-module-directory": "dev-develop",
-        "magento/magento2-acceptance-test-module-catalog-rule": "dev-develop",
-        "magento/magento2-acceptance-test-module-product-alert": "dev-develop",
-        "magento/magento2-acceptance-test-module-url-rewrite": "dev-develop",
-        "magento/magento2-acceptance-test-module-catalog-url-rewrite": "dev-develop",
-        "magento/magento2-acceptance-test-module-page-cache": "dev-develop",
-        "magento/magento2-acceptance-test-module-quote": "dev-develop",
-        "magento/magento2-acceptance-test-module-config": "dev-develop",
-        "magento/magento2-acceptance-test-module-media-storage": "dev-develop",
-        "magento/magento2-acceptance-test-module-ui": "dev-develop"
+        "magento/magento2-acceptance-test-module-store": "dev-master",
+        "magento/magento2-acceptance-test-module-eav": "dev-master",
+        "magento/magento2-acceptance-test-module-cms": "dev-master",
+        "magento/magento2-acceptance-test-module-indexer": "dev-master",
+        "magento/magento2-acceptance-test-module-customer": "dev-master",
+        "magento/magento2-acceptance-test-module-theme": "dev-master",
+        "magento/magento2-acceptance-test-module-checkout": "dev-master",
+        "magento/magento2-acceptance-test-module-backend": "dev-master",
+        "magento/magento2-acceptance-test-module-widget": "dev-master",
+        "magento/magento2-acceptance-test-module-wishlist": "dev-master",
+        "magento/magento2-acceptance-test-module-tax": "dev-master",
+        "magento/magento2-acceptance-test-module-msrp": "dev-master",
+        "magento/magento2-acceptance-test-module-catalog-inventory": "dev-master",
+        "magento/magento2-acceptance-test-module-directory": "dev-master",
+        "magento/magento2-acceptance-test-module-catalog-rule": "dev-master",
+        "magento/magento2-acceptance-test-module-product-alert": "dev-master",
+        "magento/magento2-acceptance-test-module-url-rewrite": "dev-master",
+        "magento/magento2-acceptance-test-module-catalog-url-rewrite": "dev-master",
+        "magento/magento2-acceptance-test-module-page-cache": "dev-master",
+        "magento/magento2-acceptance-test-module-quote": "dev-master",
+        "magento/magento2-acceptance-test-module-config": "dev-master",
+        "magento/magento2-acceptance-test-module-media-storage": "dev-master",
+        "magento/magento2-acceptance-test-module-ui": "dev-master"
     },
     "type": "magento2-test-module",
-    "version": "dev-develop",
+    "version": "dev-master",
     "license": [
         "OSL-3.0",
         "AFL-3.0"
@@ -58,5 +61,13 @@
                 "generated/Magento/AcceptanceTest"
             ]
         }
+    },
+    "extra": {
+        "map": [
+            [
+                "*",
+                "tests/acceptance/Magento/AcceptanceTest/Catalog"
+            ]
+        ]
     }
 }
